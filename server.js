@@ -3,7 +3,13 @@ const fetch = require('node-fetch'); // use node-fetch@2
 const cors = require('cors');
 
 const app = express();
-app.use(cors());
+const corsOptions = {
+    origin: 'https://jtpendle10.github.io', // or use '*' for testing (not recommended for production)
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const API_URL = 'https://lineage.api.ndustrial.io/graphql';
