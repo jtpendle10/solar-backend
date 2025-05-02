@@ -13,7 +13,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 const API_URL = 'https://lineage.api.ndustrial.io/graphql';
-const FALLBACK_API_TOKEN = 'token YOUR_API_TOKEN';
+const FALLBACK_API_TOKEN = 'token niou_YkiaMScYAxbh4fwn3Mx2Hpzeh3n9Va5UBVSW';
 
 app.post('/proxy', async (req, res) => {
     try {
